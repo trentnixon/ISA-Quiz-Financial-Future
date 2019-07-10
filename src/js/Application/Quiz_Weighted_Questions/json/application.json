@@ -1,0 +1,539 @@
+{
+    "data":"Json[APPLICATION] Completed",  
+    "Quiz":[
+        {
+           "Question":"The first stage of any holiday is getting there. Do you:",
+           "image":"http://placekitten.com/650/550",
+           "Answers":[
+               {
+                  "Label":"Opt for the scenic route – car, train, boat or plane. You never know what you might discover, and you’re bound to come away with a good story.",
+                  "Result":[1,2,3]
+               },
+               { 
+                "Label":"Get there early and into the business class lounge by any means necessary. There’s a spectacular buffet!",
+                "Result":[3,1,2]
+                },
+                {
+                 "Label":"Book the most direct route possible, setting off as early as you can. You’re keen to get there ASAP, and when you do you’ll be heading straight to the nearest beach.",
+                 "Result":[1,3,2]
+                 }
+           ],
+           "Response":[
+               {
+                    "Answer":[
+                        {
+                            "Copy":["According to the ASFA Retirement Standard a single person requires $545,0002 to retire comfortably. So unfortunately, until the gap is addressed, many individuals will retire with inadequate superannuation savings."],
+                            "animate":[
+                                    {
+                                        "icon":"wall_st_dude.png",
+                                        "in":"fadeIn",
+                                        "out":"fadeOut",
+                                        "position":"right"
+                                    }
+                                ]
+                        }
+                    ],
+                    "Review":[
+                        {
+                            "ReviewShow":true,
+                            "ReviewHeader":"How much is required for a single person to retire comfortably", 
+                            "ReviewCopy":["The disparity of super balances between men and women is decreasing, and will continue to decrease as new generations of women spend more time in the workforce than their mothers and grandmothers, but there is still a lot of work to be done.",
+                                "According to the ASFA Retirement Standard a single person requires $545,0002 to retire comfortably. So unfortunately, until the gap is addressed, many individuals will retire with inadequate superannuation savings."],
+                            
+                            "Poster":"http://placekitten.com/800/600",
+                            "CTA":[
+                                {
+                                    "Label":"Find out more",
+                                    "Link":"http://www.google.com"
+                                }
+                            ]
+                        }
+                    ]
+                } 
+           ] 
+        },
+       {
+        "Question":"When choosing a place to stay, your must-haves include:",
+        "image":"http://placekitten.com/600/600",
+        "Answers":[
+            {
+               "Label":"All the creature comforts – and ideally a spa bath in your room.",
+               "Result":[2,1,3]
+            },
+            {
+             "Label":"It needs to be in walking distance of some pretty fine restaurants. And on a slight slope so you can roll home afterwards.",
+             "Result":[3,1,2]
+            },
+            {
+             "Label":"You don't have any, all you need is the swag you carry with you.",
+             "Result":[2,3,1]
+            }
+        ],
+        "Response":[
+            {
+                 "Answer":[
+                     {
+                        "Copy":["1 in 3 women, and 1 in 4 Men, report having no superannuation savings"],
+                        "animate":[
+                            {
+                                "icon":"builder002.png",
+                                "in":"fadeIn",
+                                "out":"fadeOut",
+                                "position":"right"
+                            }
+                        ]
+                     }
+                 ],
+                 "Review":[
+                     {
+                         "ReviewShow":true,
+                         "ReviewCopy":["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."],
+                        "ReviewHeader":"No Super?", 
+                         "Poster":"http://placekitten.com/800/600"  
+                     }
+                 ]
+             } 
+        ]
+    },
+        {
+         "Question":"It’s day one of your holiday. What’s on the itinerary?",
+         "image":"http://placekitten.com/650/550",
+         "Answers":[
+             {
+                "Label":"You’re doing the dormant volcano climb today, and have plenty more things lined up – but you’re hoping to hear of some more ‘off the beaten track’ adventures.",
+                "Result":[1,3,1]
+             },
+             {
+              "Label":"You’ve researched all the latest restaurant openings and made reservations months in advance. Your schedule would put a sought-after food critic to shame.",
+              "Result":[3,1,1]
+           },
+            {
+                "Label":"Sleep-ins, a bit of pampering and some much-needed down time. On holiday there’s no such thing as a schedule.",
+                "Result":[1,0,3]
+            }
+         ],
+         "Response":[
+            {
+                 "Answer":[
+                     {
+                        "Copy":["The WGEA scorecard shows that full-time working women earn a base salary that is about 18% less, and a total remuneration that is more than 22% less9, than full-time working men."],
+                        "animate":[
+                            {
+                                "icon":"chief.png",
+                                "in":"fadeIn",
+                                "out":"fadeOut",
+                                "position":"right"
+                            }
+                             ]
+                     }
+                 ],
+                 "Review":[
+                     {
+                         "ReviewShow":true,
+                         "ReviewCopy":["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."],
+                        "ReviewHeader":"Salary Percentage Difference", 
+                         "Poster":"http://placekitten.com/800/600",
+                         "CTA":[
+                            {
+                                "Label":"Read Article",
+                                "Link":"http://www.google.com"
+                            }
+                        ]  
+                     }
+                 ]
+             } 
+            ]
+        },
+        {
+            "Question":"Winding down at the end of the day, your tipple of choice would be:",
+            "image":"http://placekitten.com/650/550",
+            "Answers":[
+                {
+                   "Label":"A crisp glass of Sav Blanc paired with a killer view.",
+                   "Result":[2,1,3]
+                },
+                {
+                 "Label":"Head back, drinking directly from a waterfall.",
+                 "Result":[0,3,0]
+              },
+               {
+                   "Label":"A tasting palette of craft beers.",
+                   "Result":[3,1,2]
+               }
+            ],
+            "Response":[
+               {
+                    "Answer":[
+                        {
+                           "Copy":["Women currently make up more than 71% of all part-time employees11, working in part-time or casual capacity, leaves them with less working hours to build their super balance."],
+                           "animate":[
+                               {
+                                   "icon":"flight_attendant.png",
+                                   "in":"fadeIn",
+                                   "out":"fadeOut",
+                                   "position":"right"
+                               }
+                                ]
+                        }
+                    ],
+                    "Review":[
+                        {
+                            "ReviewShow":true,
+                            "ReviewCopy":["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."],
+                           "ReviewHeader":"The Part-time work force Crisis", 
+                            "Poster":"http://placekitten.com/800/600" ,
+                            "CTA":[
+                                {
+                                    "Label":"Further Reading on the Guardian",
+                                    "Link":"http://www.google.com"
+                                }
+                            ]
+                        }
+                    ]
+                } 
+               ]
+           },
+           {
+            "Question":"If you’re going to experience some local marine life on your travels, you would prefer it to be:",
+            "image":"http://placekitten.com/650/550",
+            "Answers":[
+                {
+                   "Label":"Served with local veg.",
+                   "Result":[3,1,2]
+                },
+                {
+                 "Label":"Spotted on the starboard side of your chartered yacht.",
+                 "Result":[2,1,3]
+              },
+              {
+               "Label":"In abundance! You didn’t hire diving gear to look at seaweed.",
+               "Result":[1,3,1]
+            }
+               
+            ],
+            "Response":[
+               {
+                    "Answer":[
+                        {
+                           "Copy":["Women typically retire earlier than men and on average live longer, and therefore require more superannuation to retire on comfortably."],
+                           "animate":[
+                               {
+                                   "icon":"nurse.png",
+                                   "in":"fadeIn",
+                                   "out":"fadeOut",
+                                   "position":"right"
+                               }
+                                ]
+                        }
+                    ],
+                    "Review":[
+                        {
+                            "ReviewShow":true,
+                            "ReviewCopy":["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."],
+                           "ReviewHeader":"The Gender Retierment age!", 
+                            "Poster":"http://placekitten.com/800/600"  
+                        }
+                    ]
+                } 
+               ]
+           },
+           {
+            "Question":"You're looking to cool off. Do you:",
+            "image":"http://placekitten.com/650/550",
+            "Answers":[
+                {
+                   "Label":"Order a double scoop of gelato.",
+                   "Result":[3,1,2]
+                },
+                {
+                 "Label":"Sign up for a canyoning trip. Why slip into a body of water when you can slide in from a great height?",
+                 "Result":[1,3,2]
+              },
+              {
+               "Label":"Mix culture with a side of strong air con and head to an art gallery.",
+               "Result":[2,1,3]
+            }
+               
+            ],
+            "Response":[
+               {
+                    "Answer":[
+                        {
+                           "Copy":["Women typically retire earlier than men and on average live longer, and therefore require more superannuation to retire on comfortably."],
+                           "animate":[
+                               {
+                                   "icon":"nurse.png",
+                                   "in":"fadeIn",
+                                   "out":"fadeOut",
+                                   "position":"right"
+                               }
+                                ]
+                        }
+                    ],
+                    "Review":[
+                        {
+                            "ReviewShow":true,
+                            "ReviewCopy":["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."],
+                           "ReviewHeader":"The Gender Retierment age!", 
+                            "Poster":"http://placekitten.com/800/600"  
+                        }
+                    ]
+                } 
+               ]
+           },
+           {
+            "Question":"When visiting a new city you want to see and experience as much as possible so that you leave with a real sense of its unique character. To do this, you:",
+            "image":"http://placekitten.com/650/550",
+            "Answers":[
+                {
+                   "Label":"Pretend you're a local for the day and wile away an afternoon at a cafe watching the world go by. ",
+                   "Result":[3,1,2]
+                },
+                {
+                 "Label":"Climb to higher ground and see the city in its entirety, opting of course for the fastest route down - base jumping.",
+                 "Result":[1,3,1]
+              },
+              {
+               "Label":"Delve into its history, visiting museums and iconic buildings to get a sense of what’s shaped the city as it stands today. ",
+               "Result":[2,1,3]
+            }
+               
+            ],
+            "Response":[
+               {
+                    "Answer":[
+                        {
+                           "Copy":["Women typically retire earlier than men and on average live longer, and therefore require more superannuation to retire on comfortably."],
+                           "animate":[
+                               {
+                                   "icon":"nurse.png",
+                                   "in":"fadeIn",
+                                   "out":"fadeOut",
+                                   "position":"right"
+                               }
+                                ]
+                        }
+                    ],
+                    "Review":[
+                        {
+                            "ReviewShow":true,
+                            "ReviewCopy":["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."],
+                           "ReviewHeader":"The Gender Retierment age!", 
+                            "Poster":"http://placekitten.com/800/600"  
+                        }
+                    ]
+                } 
+               ]
+           },
+           {
+            "Question":"As a memento of your trip, you want to leave with:",
+            "image":"http://placekitten.com/650/550",
+            "Answers":[
+                {
+                   "Label":"A second suitcase that’s bursting with new clothes.",
+                   "Result":[1,1,3]
+                },
+                {
+                 "Label":"A couple of ‘You wouldn’t believe it’ moments – and the photos to prove it.",
+                 "Result":[1,3,1]
+              },
+              {
+               "Label":"Two cases of quality drops that you can't wait to crack open when you get home.",
+               "Result":[3,1,2]
+            }
+               
+            ],
+            "Response":[
+               {
+                    "Answer":[
+                        {
+                           "Copy":["Women typically retire earlier than men and on average live longer, and therefore require more superannuation to retire on comfortably."],
+                           "animate":[
+                               {
+                                   "icon":"nurse.png",
+                                   "in":"fadeIn",
+                                   "out":"fadeOut",
+                                   "position":"right"
+                               }
+                                ]
+                        }
+                    ],
+                    "Review":[
+                        {
+                            "ReviewShow":true,
+                            "ReviewCopy":["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."],
+                           "ReviewHeader":"The Gender Retierment age!", 
+                            "Poster":"http://placekitten.com/800/600"  
+                        }
+                    ]
+                } 
+               ]
+           },
+           {
+            "Question":"If a local invited you round for dinner, said it would take over four hours to cook and promptly started burying food in the ground, your response would be to:",
+            "image":"http://placekitten.com/650/550",
+            "Answers":[
+                {
+                   "Label":"Make the most of the time to explore a new area, of course.",
+                   "Result":[1,3,2]
+                },
+                {
+                 "Label":"Run for the hills.",
+                 "Result":[0,0,3]
+              },
+              {
+               "Label":"Start taking notes.",
+               "Result":[3,2,0]
+            }
+               
+            ],
+            "Response":[
+               {
+                    "Answer":[
+                        {
+                           "Copy":["Women typically retire earlier than men and on average live longer, and therefore require more superannuation to retire on comfortably."],
+                           "animate":[
+                               {
+                                   "icon":"nurse.png",
+                                   "in":"fadeIn",
+                                   "out":"fadeOut",
+                                   "position":"right"
+                               }
+                                ]
+                        }
+                    ],
+                    "Review":[
+                        {
+                            "ReviewShow":true,
+                            "ReviewCopy":["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."],
+                           "ReviewHeader":"The Gender Retierment age!", 
+                            "Poster":"http://placekitten.com/800/600"  
+                        }
+                    ]
+                } 
+               ]
+           },
+           {
+            "Question":"In the spur of the moment your friend suggests you both go bungee jumping. Your response is:",
+            "image":"http://placekitten.com/650/550",
+            "Answers":[
+                {
+                   "Label":"Awesome, let's do it. Twice!",
+                   "Result":[2,3,0]
+                },
+                {
+                 "Label":"I’m sorry, I can’t. I just ate.",
+                 "Result":[3,0,2]
+              },
+              {
+               "Label":"Thanks, but I’ll just take a dip in the river and get a good photo for you.",
+               "Result":[2,0,3]
+            }
+               
+            ],
+            "Response":[
+               {
+                    "Answer":[
+                        {
+                           "Copy":["Women typically retire earlier than men and on average live longer, and therefore require more superannuation to retire on comfortably."],
+                           "animate":[
+                               {
+                                   "icon":"nurse.png",
+                                   "in":"fadeIn",
+                                   "out":"fadeOut",
+                                   "position":"right"
+                               }
+                                ]
+                        }
+                    ],
+                    "Review":[
+                        {
+                            "ReviewShow":true,
+                            "ReviewCopy":["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."],
+                           "ReviewHeader":"The Gender Retierment age!", 
+                            "Poster":"http://placekitten.com/800/600"  
+                        }
+                    ]
+                } 
+               ]
+           },
+           {
+            "Question":"It's the last day of your trip. Where would you rather be?",
+            "image":"http://placekitten.com/650/550",
+            "Answers":[
+                {
+                   "Label":"Soaking up some final rays on the beach.",
+                   "Result":[2,1,3]
+                },
+                {
+                 "Label":"In a post-brunch food coma already planning your next meal.",
+                 "Result":[3,1,2]
+              },
+              {
+               "Label":"Venturing off the grid because you're never coming home.",
+               "Result":[1,3,0]
+            }
+               
+            ],
+            "Response":[
+               {
+                    "Answer":[
+                        {
+                           "Copy":["Women typically retire earlier than men and on average live longer, and therefore require more superannuation to retire on comfortably."],
+                           "animate":[
+                               {
+                                   "icon":"nurse.png",
+                                   "in":"fadeIn",
+                                   "out":"fadeOut",
+                                   "position":"right"
+                               }
+                                ]
+                        }
+                    ],
+                    "Review":[
+                        {
+                            "ReviewShow":true,
+                            "ReviewCopy":["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."],
+                           "ReviewHeader":"The Gender Retierment age!", 
+                            "Poster":"http://placekitten.com/800/600"  
+                        }
+                    ]
+                } 
+               ]
+           }                 
+    ],
+    "ResultBreakdown":[
+        {
+         
+            "Review":"You are a Foodie: You should go on this Trip (Link to Trip)"
+        },
+        {
+       
+            "Review":"You are an Adventurist: You should go on this Trip (Link to Trip)"
+        },
+        {
+        
+            "Review":"You are a Luxury Traveler: You should go on this Trip (Link to Trip)"
+        }
+    ]
+}

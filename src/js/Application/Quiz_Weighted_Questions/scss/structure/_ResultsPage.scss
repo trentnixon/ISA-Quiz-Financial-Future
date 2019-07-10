@@ -1,0 +1,324 @@
+#ResultPage{
+
+    background-color: $PrimaryColor;
+    padding: 0;
+   
+    #ShareMe{
+        padding: 10px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: flex-start;
+
+            h3{
+                margin: 0 10px;
+            }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            align-content: flex-start;
+      
+
+            li{
+                margin: 0 2px;
+                cursor: pointer;
+
+                svg{ 
+                    background-color: transparent !important;
+                    border:1px solid;
+                    border-radius: 100px;
+                       path{ fill:$SecondaryColor;}
+                    } 
+                circle,rect{
+                    fill:transparent;
+                }
+            }
+        }
+    }
+
+    .ResetQuiz{
+        padding: 20px 0;
+        background-color: $PrimaryColor;
+        border-bottom: 1px solid white;
+        margin: 0px;
+        button{
+            float: right;
+            box-shadow: none;
+            text-transform: unset;
+        }
+    }
+
+    .Result_Ints{
+        margin: 0;
+        padding: 20px 5%;
+        border-top:1px solid #979797;
+        border-bottom:1px solid #979797;
+
+        h1{
+            text-align: center;
+            font-size: 2.2em;
+            width: 60%;
+            margin-bottom: 10px;
+           
+            padding: 0 0 10px 10px;
+            margin: 0 20% 20px;
+            color: $SecondaryColor;
+        }
+
+        .YourScore{
+            text-align: center;
+            h2{
+                font-size: 2em;
+                text-transform: uppercase;
+            }
+            h3{
+                font-size: 3em;
+                line-height: 1.5em;
+            }
+        }
+    
+        .ScoreCard{
+            h2{
+                display: none;
+            }
+
+            ul{
+                li{
+                    float: left;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 100px;
+                    text-align: center;
+                    line-height: 30px;
+                    margin: 0 5px 0 0;
+                    transition: all 0.8s ease;
+                    background-color:$Color_Default; 
+                    color: #7adad4;
+                }
+                li.correct{ background-color:  $Color_Corrent; color:  white; transition: all 0.8s ease;}
+                li.incorrect{ background-color:  $Color_Incorrect; color:  white; transition: all 0.8s ease;}
+                li.default{ background-color:$Color_Default; color: #7adad4;  transition: all 0.8s ease;}
+            }
+        }
+       
+        .PercentageCircleContainer{
+                
+                padding: 30px 0;
+                text-align: center;
+
+            .PercentageCircle{color: white;}
+
+            h1{
+                color: $Quaternary;
+                text-align: left;
+                margin: 0 0 30px 0px;
+                padding: 0;
+                font-family: 'Guardian Headline Bold';
+                font-size:2.6em;
+            }
+            h2{
+                text-align: left;
+                font-size: 2em;
+                margin: 10px 0 15px;
+                color: $Quaternary;
+            }
+            p{
+                text-align: left;
+                font-size:1.2em;
+                margin:0;
+                color: $Quaternary;
+            }
+
+            .MeterImage{
+                text-align: right;
+                img{
+                    width: 90%;
+                }
+            }
+
+           
+        }
+    .Me{
+            
+            background-color: $PrimaryColor;
+        }
+       .NotMe{
+            display: none;
+        }
+
+
+
+
+        @media only screen and (max-width : 992px) and (min-width : 768px)  {
+            .PercentageCircleContainer{
+                    h1{font-size: 2em;}
+                    h2{font-size: 1.6em; }
+                    p{font-size: 1.2em;}
+                .MeterImage{
+                    text-align: center;
+         
+                    img{
+                        width: 100%;
+                    }
+                    
+                }
+            }
+        }
+
+        @media only screen and (max-width : 768px) and (min-width : 576px)  and (orientation : portrait){
+            padding: 0px 5%;
+            .PercentageCircleContainer{ 
+                h1{}
+                h2{
+                    font-size: 1.4em;
+                }
+                p{
+                    font-size: 1.2em;
+                }
+                .MeterImage{padding: 0% 0; img{
+                width: 90%;
+            }}}
+        }
+
+        @media only screen and (max-width : 767px) and (min-width : 576px)  {
+            padding: 0px 5%;
+
+            .PercentageCircleContainer{
+                 padding: 20px 0;
+                
+                 h1{
+                    margin: 0 0 20px 0px;
+                }
+                h2{
+                    font-size: 1.4em;
+                }
+                p{
+                    font-size: 1.2em;
+                }
+
+                .MeterImage{
+                    text-align: center;
+                    padding: 10% 0;
+                    img{
+                        width: 70%;
+                    }
+                    
+                }
+            }
+    }
+
+   
+
+
+            @media only screen and (max-width : 576px)  {
+                padding: 0px 5%;
+                .PercentageCircleContainer{
+                    h1{font-size: 2.5em;}
+                    h2{font-size: 1.6em; }
+                    p{font-size: 1.2em;}
+                .MeterImage{
+                    text-align: center;
+                    padding: 10% 0;
+                    img{
+                        width: 90%;
+                    }
+                    
+                }
+            }
+        }
+
+    }
+    
+
+
+
+    .Quiz_Summary{
+        display: none;
+        background-color: #42bfb7;
+        border-top: 1px solid white;
+        padding: 20px 0;
+        margin: 50px 0 0px;
+        
+       
+        p{
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+        }
+    }
+
+    .ReviewSection{
+        padding: 50px 15%;
+        display: inline-block;
+
+        h1{
+            font-size: 2em;
+            text-align: center;
+            border-bottom: 1px solid;
+            margin-bottom: 50px;
+            padding-bottom: 10px;
+            width: 90%;
+            margin: 0 5% 50px;
+
+            .ReviewIcon{
+                float: right;
+            }
+        }
+        p{
+            float: right;
+            width: 48%;
+            margin: 0 5% 0 0;
+            line-height: 1.3em;
+        }
+        img{
+            width: 40%;
+            float: left;
+            margin: 0 1% 0 5%;
+        }
+
+        a{
+            float: right;
+            margin: 30px 5% 0 0;   
+        }
+    }
+
+    .ReviewSection:nth-child(even) {background: #FFCFAB; background-image: URL("/assets/images/asfalt-dark.png"); }
+    .ReviewSection:nth-child(odd) {background:#9DEAE4; background-image: URL("/assets/images/asfalt-dark.png");}
+
+
+    .ReviewSection.Correct{
+        h1{
+            .ReviewIcon{
+                color: $Color_Corrent;
+            }
+        }
+    }
+
+    .ReviewSection.InCorrect{
+        h1{
+            .ReviewIcon{
+                color: $Color_Incorrect;
+            }
+        }
+    }
+
+
+    .crunchingtheNumbers{
+        text-align: center;
+        padding: 50px;
+        color: $SecondaryColor;
+        h1{
+            color: $SecondaryColor;
+            font-size: 2em;
+            margin: 30px 0;
+        }
+    }
+}

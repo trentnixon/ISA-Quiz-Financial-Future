@@ -1,0 +1,76 @@
+/*-
+
+    Styling Structure!
+
+    Global Files
+        ** _reset
+        ** _variables
+        ** _reset_bootstraps // For Custom Classes
+
+
+    Project Files/ Page Layouts
+        ** Pages/ _Main
+
+        Project DOM
+            ** dom/_header.scss
+         
+            ** dom/_BottomNavBar.scss
+
+           Project (Card) Elements
+            Outer frame
+            ** /components/Cards/_Card_Frame.scss
+            Inner Frame
+            ** /components/Cards/_Card_Inner.scss
+
+                Inside Inner lies the card Elements
+                Card Type
+                ** /element/_Card_Typograhy.scss
+                Card Header
+                ** /element/_Card_Banner.scss
+                Card Content
+                ** /element/_Card_Content.scss
+                Card Bottom Bar
+                ** /element/_Card_BottomBar.scss
+
+                Side Specific
+                ** /_Card_Front.scss
+                ** /_Card_Back.scss
+
+
+            Flip Action
+            ** /components/Cards/_Card_Flip.scss
+            Bottom Bar
+            ** components/Cards/_Card_Bottom_Bar.scss
+            Media Components
+            ** /components/Cards/_Card_Media.scss
+
+ 
+    Global Elements
+        Buttons
+        ** components/Btns/_btns.scss
+
+-*/
+
+
+/*- Resets -*/
+@import "./css/reset/_reset.scss";
+
+
+$http:'https://gdn-cdn.s3.amazonaws.com/embed/2019/04/financial-future/';
+//$http:'/';
+
+$path:'assets/';
+$images:'images/';
+$fonts:'fonts/';
+
+
+/*- SCCS Properties -*/
+@import "./css/scss/_Mixin.scss";
+@import "./css/scss/_variables.scss";
+@import "./css/reset/_reset_bootstraps.scss";
+
+
+
+/*- Build up Dom Elements -*/
+@import "./css/pages/_loading.scss";
+@import "./css/pages/_Main.scss";

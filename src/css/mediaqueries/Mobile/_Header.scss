@@ -1,0 +1,160 @@
+/* Smartphones (portrait and landscape) ----------- */
+/* Large Phones ----------- */
+
+
+$MBG: rgb(0,0,0);
+$MGradient: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.39399509803921573) 50%, rgba(255,255,255,0) 100%);
+
+
+@media only screen and  (max-width : 992px) {
+    #Header{
+        padding: 0;
+      
+       .Title{
+            .Title-Fill-Color{  width: 70%; }
+           .Title-Container{
+                h1{   font-size: 2em; }
+            }
+         }
+
+        }
+    }
+
+@media only screen and (min-width : 576px) and (max-width : 768px) {
+#Header{
+    padding: 0;
+  
+   .Title{
+        .Title-Fill-Color{  width: 95%; }
+       .Title-Container{
+            h1{   font-size: 2em; }
+        }
+     }
+
+     .DarkBar{
+        background:$MBG;
+        background: $MGradient 
+     }
+    }
+}
+
+
+/* Medium Phones ----------- */
+@media only screen and (min-width : 480px) and (max-width : 576px) {
+
+#Header{
+    padding: 0;
+
+    .Title{
+        .Title-Container{
+            h1{   font-size: 1.9em; }
+        }
+        .Title-Fill-Color{  width: 95%; }
+    }
+
+    .DarkBar{
+        background:$MBG;
+        background: $MGradient
+     }
+
+    #Sponsor{
+        margin-bottom: 0px;
+        padding: 0;
+        border-bottom: unset;
+        a{ line-height: 2.5em;}
+        span{ float: left; line-height: 3em;}
+        img {float: unset;}
+        
+        .text-left{
+            border-bottom: 2px solid #80D1D6;
+            padding: 0 25px;
+        }
+        .text-right{
+            text-align: left !important;
+            padding: 12px 25px 0;
+        }
+        
+}
+
+    .container{
+        h1{   font-size: 1.8em; }
+    } 
+}
+
+}
+
+/* Small Phones ----------- */
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+
+#Header{
+    padding: 0;
+    .Title{
+        .Title-Container{
+            h1{   font-size: 1.8em; }
+        }
+        .Title-Fill-Color{  width: 95%; }
+    }
+
+    .DarkBar{
+        background:$MBG;
+        background: $MGradient
+     }
+    #Sponsor{
+        margin-bottom: 0px;
+        padding: 0;
+        border-bottom: unset;
+        a{ line-height: 2.5em;}
+        span{ float: left; line-height: 3em;}
+        img {float: unset;}
+        
+        .text-left{
+            border-bottom: 2px solid #80D1D6;
+            padding: 0 25px;
+           
+        }
+        .text-right{
+            text-align: left !important;
+            padding: 12px 25px 0;
+            
+            }
+        }
+    }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+#Header{
+    .DarkBar{
+        background:$MBG;
+        background: $MGradient
+     }
+     .Title{
+        .Title-Container{
+            h1{   font-size: 1.3em; }
+        }
+        
+        .Title-Fill-Color{  width: 95%; }
+    }
+
+    #Sponsor{
+        margin-bottom: 0px;
+        padding: 0;
+        border-bottom: unset;
+        a{ line-height: 2.5em;}
+        span{ float: left; line-height: 3em;}
+        img {float: unset;}
+        
+        .text-left{
+            border-bottom: 2px solid #80D1D6;
+            padding: 0;
+           
+        }
+        .text-right{
+            text-align: left !important;
+            padding: 12px 0px 0;
+            
+        }
+        
+    }
+}
+}

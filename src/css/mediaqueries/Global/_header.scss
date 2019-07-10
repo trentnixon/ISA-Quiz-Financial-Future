@@ -1,0 +1,67 @@
+#Header{
+    @include BMP($PrimaryColor,0%,0 0 10px 0px) ;
+
+    height:80vh;
+    background-position:  top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    align-items: start;
+   
+.Title{
+    bottom: -8%;
+    left: 0;
+    width: auto;
+    padding: 1em;
+    margin: 0;
+    width:100%;
+    position: absolute;
+
+    .Title-Fill-Color{
+        position: absolute;
+            top: 0;
+            left: 0;
+            width: 70%;
+            height: 100%;
+            background-color: $Quaternary; 
+            z-index: 0;
+    }
+    .Title-Container{ 
+        z-index: 10;
+        position: relative;
+        padding: 0;
+        
+        h1{
+            @include FONT($FontLargeSize,$FontLargeLine,100,0 0 0px) ; 
+            color:$PrimaryColor;
+            padding: 3px 14px; 
+            font-family: $FontFamilyHeaderBold;
+            letter-spacing: 1px;
+            font-weight: bold;
+    
+        }
+     
+      //  h1:nth-child(1){ color: #73D1CA;}
+    
+        h2{
+           
+            @include FONT($FontMedSize,$FontMedLine,$FontMedWeight,0 0 10px) ;
+            color:$PrimaryHColor;
+        }
+    
+        p{
+            @include FONT($FontSmallSize,$FontSmallLine,$FontSmallWeight,0 20% 10px 0 ) ; 
+            display: none;
+        }
+    }
+}
+    
+    .DarkBar{
+        background-color: rgba(0,0,0,.8);
+        height: max-content;
+    }
+
+
+    @import "./_Sponsor_Top.scss";
+
+} 

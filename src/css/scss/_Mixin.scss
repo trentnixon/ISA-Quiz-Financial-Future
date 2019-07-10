@@ -1,0 +1,30 @@
+
+// BG Color Margin and padding
+@mixin BMP($BG,$M,$P) {
+  background-color: $BG;
+  margin:$M;
+  padding: $P;
+} 
+
+
+
+// Font and copy styles
+@mixin FONT($size,$line,$weight,$margin) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line;
+  margin:$margin;
+} 
+
+
+// Style a Button
+@mixin BTN($color,$bg,$border) {
+    color:$color;
+    background-color:$bg;
+    border-color: $border;
+  } 
+
+  @mixin ROTATEBTN($deg) {
+    transform: rotate($deg);
+  } 
+  

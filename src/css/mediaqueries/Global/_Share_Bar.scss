@@ -1,0 +1,97 @@
+#ShareBar{
+
+    background-color: $TertiaryColor;
+    margin-top: 60px;
+    color: $SecondaryColor;
+    padding: .5em 2em;
+
+    h3{ color: $SecondaryColor;}
+    
+    .ReadMore{
+            font-weight: 100;
+            transition: all .4s ease-in;
+            color: $SecondaryColor;
+            line-height: 1.3em;
+            display: inline-block;
+            margin: 8px 0;
+
+            strong{
+                font-weight: 800;
+            }
+    }
+    .ReadMore:hover{
+        text-decoration: none;
+    }
+
+    .chevron.right:before {
+        display: none;
+        left: 0;
+        transform: rotate(45deg);
+    }
+
+    .chevron.bottom:before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    .chevron.left:before {
+        left: 0.25em;
+        transform: rotate(-135deg);
+    }
+
+    .chevron::before {
+        border-style: solid;
+        border-width: 0.15em 0.15em 0 0;
+        content: '';
+        display: inline-block;
+        height: 0.45em;
+        left: 0.15em;
+        position: relative;
+        top: 1.1em;
+        transform: rotate(-45deg);
+        vertical-align: top;
+        width: 0.45em;
+    } 
+
+ 
+    #ShareMe{
+        background-color: $TertiaryColor;
+        color: $SecondaryColor;
+        border-radius: 8px;
+        padding: 5px 10px;
+        border:2px solid $SecondaryColor;
+        display: inline-block;
+
+        h3{
+            font-size: 1em;
+            font-weight: 100;
+            display: inline-block;
+            line-height: 2em;
+            margin: 0 10px 0 0;
+            color: $SecondaryColor;
+            font-family: $FontFamilyBody;
+        }
+
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            float: right;
+
+            li{
+                margin: 0 2px;
+                cursor: pointer;
+
+                svg{ 
+                    background-color: transparent !important;
+                       path{ fill:$SecondaryColor;}
+                    } 
+                circle,rect{
+                    fill:$TertiaryColor;
+                    
+                }
+            }
+        }
+    }
+}

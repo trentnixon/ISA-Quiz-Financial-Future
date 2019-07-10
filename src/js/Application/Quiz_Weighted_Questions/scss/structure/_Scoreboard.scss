@@ -1,0 +1,151 @@
+#Scoreboard{ 
+    padding: 0px;
+  // background-color:rgba(0,0,0,0.9);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 52px;
+    z-index: 99; 
+
+
+    
+.TrackingDots{
+    display: none;
+}
+        
+    ul{
+        width: 100%;
+        /* border: 1px solid; */
+        display: flex;
+        overflow: hidden;
+        white-space: nowrap;
+    
+     
+        li{
+            float: left;
+            height: 5px;
+            text-align: center;
+            line-height: 10px;
+            white-space: nowrap;
+            transition: all 0.8s ease;
+            background-color:$Color_Default; 
+            color: #7adad4;
+            border-right:1px inset transparent;
+            a{
+                color: white;
+            }
+        }
+        li.correct{ background-color:  $Color_Corrent; color:  white; transition: all 0.8s ease;}
+        li.incorrect{ background-color:  $Color_Incorrect; color:  white; transition: all 0.8s ease;}
+        li.default{ background-color:transparent; color: #7adad4;  transition: all 0.8s ease;}
+    }
+
+        .inner{
+                padding: 0px;
+            h2{
+               
+                font-size: $FontMedSize;
+                color:white;
+                line-height:2em;
+            }
+
+            h1{ display: none;}
+
+            .DisplayGauge{
+                width: 100%;
+                margin: 0%;
+
+                li.perc_0{ 
+                        p{
+                            opacity: 0;
+                            transition: opacity .8s;
+                        } 
+                }
+
+                li{
+                    padding: 15px 0;
+                    
+                    
+                    height: auto;
+                    border: none;
+                    p{
+                        font-size: .9em;
+                        line-height: 1em;
+                        color: #333;
+                        opacity: 1;
+                        transition: opacity .8s;
+                        white-space:nowrap;
+                    }
+                }
+                li:nth-child(1){
+                    background-color: $gaugeColor1;
+                }
+                li:nth-child(2){
+                    background-color: $gaugeColor2;
+                }
+                li:nth-child(3){
+                    background-color: $gaugeColor3;
+                }
+                li:nth-child(4){
+                    background-color: $gaugeColor4;
+                }
+            }
+        }
+
+
+        
+
+        @media only screen and (min-width : 1200px) {
+            .tracking{
+                margin-left: calc(-100vw / 2 + 1140px / 2);
+                margin-right: calc(-100vw / 2 + 1140px / 2);
+            }
+        }
+
+        @media only screen and (min-width : 992px) and (max-width : 1200px){
+            .tracking{
+                margin-left: calc(-100vw / 2 + 960px / 2);
+                margin-right: calc(-100vw / 2 + 960px / 2);
+            }
+        } 
+
+        @media only screen and (min-width : 768px) and (max-width : 992px) {
+            .tracking{
+                margin-left: calc(-100vw / 2 + 720px / 2);
+                margin-right: calc(-100vw / 2 + 720px / 2);
+            }
+        } 
+        @media only screen and (min-width : 576px)  and (max-width : 768px){
+            .tracking{
+                margin-left: calc(-100vw / 2 + 540px / 2);
+                margin-right: calc(-100vw / 2 + 540px / 2);
+            }
+        }
+
+        @media only screen and (max-width : 576px)  {
+            display: none;
+        }
+
+
+
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  
+            //CSS
+            background-color: red;
+            .tracking{
+                margin-left: calc(-100vw / 2 + 720px / 2);
+                margin-right: calc(-100vw / 2 + 720px / 2);
+            }
+          }
+
+          @media (min-width: 1024px) and (max-width: 12000px) and (orientation: portrait) {
+  
+            //CSS
+            background-color: red;
+            .tracking{
+                margin-left: calc(-100vw / 2 + 960px / 2);
+                margin-right: calc(-100vw / 2 + 960px / 2);
+            }
+          }
+
+
+}

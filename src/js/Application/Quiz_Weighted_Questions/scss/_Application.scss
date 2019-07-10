@@ -1,0 +1,20 @@
+
+/************ 
+** Application Variables
+*************/
+
+$Color_Corrent:#3db540;
+$Color_Incorrect:#D4FFE0;
+$Color_Default:#D8D8D8;
+$Color_Hover:#9c9c9c;
+
+
+$gaugeColor1:#1ba193;
+$gaugeColor2:#bbcf08;
+$gaugeColor3:#f8b010;
+$gaugeColor4:#e95b0c;
+
+// Import Application Elements
+@import "./utils/_buttons.scss";
+@import "./structure/_QuizWrapper";
+@import "./structure/_ResultsPage";

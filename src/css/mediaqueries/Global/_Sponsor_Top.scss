@@ -1,0 +1,28 @@
+#Sponsor{
+
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color:$PrimaryColor;
+
+    a{
+        color:$PrimaryColor;
+        text-decoration: none;
+        line-height: 3.5em;
+        font-weight: 100;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+
+    span{
+        line-height: 3.5em;
+        float: right;
+        color:$PrimaryColor; 
+    }
+    img{
+        width: 100px;
+        margin: 0 10px 0 10px;
+        float: right;
+        display: inline-block;
+    }
+}

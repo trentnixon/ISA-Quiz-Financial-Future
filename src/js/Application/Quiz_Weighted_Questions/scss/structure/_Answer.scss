@@ -1,0 +1,56 @@
+#Answer{
+
+    .AnimateInThis{
+        overflow: hidden;
+    
+
+        #icon{
+            text-align: center;
+
+            img{
+                height: 250px;;
+            }
+        }
+
+        .speechbubble {
+            position: relative;
+            
+            border-radius: .4em;
+            
+            width: 90%;
+            padding: 4%;
+            margin: 0px 5% 20px;
+            font-size: .9em;
+            line-height: 1.2em;
+
+
+            h2{
+                font-size: $FontMedSize;
+                margin-bottom: 20px;
+            }
+        }
+        
+        .speechbubble:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border: 21px solid transparent;
+            
+            border-bottom: 0;
+            margin-left: -21px;
+            margin-bottom: -21px;
+        }
+    }
+}
+
+#Answer.correct{
+    .speechbubble {background: $Color_Corrent; color: $SecondaryColor;}
+    .speechbubble:after {border-top-color: $Color_Corrent;}
+}
+#Answer.incorrect{
+    .speechbubble {background: $Color_Incorrect; color: $PrimaryColor;}
+    .speechbubble:after {border-top-color: $Color_Incorrect;}
+}

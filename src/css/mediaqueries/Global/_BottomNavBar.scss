@@ -1,0 +1,13 @@
+#BottomBar{
+
+    display: none;
+    @include BMP($TertiaryColor,0%,10px) ;
+    border-top:3px solid $PrimaryColor;
+
+    height: 70px;
+    width: 100%;
+
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+} 

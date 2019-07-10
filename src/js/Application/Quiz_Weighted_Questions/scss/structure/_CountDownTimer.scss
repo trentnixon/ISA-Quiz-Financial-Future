@@ -1,0 +1,16 @@
+#CountDownTimer{
+    text-align: right;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+
+    h2{
+        font-size: $FontSmallSize;
+        span{
+           
+            color: $SecondaryColor;
+            font-size: $FontMedSize;
+           
+        }
+    }
+}

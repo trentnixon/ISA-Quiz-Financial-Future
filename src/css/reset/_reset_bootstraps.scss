@@ -1,0 +1,9 @@
+html {
+  body {
+     font-family: $FontFamilyBody;
+
+      background-color:$PrimaryColor;
+      .nopadding{ padding: 0; }
+      .nomargin{ margin: 0; }
+  }
+}

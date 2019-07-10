@@ -1,0 +1,1109 @@
+/*-
+
+    Styling Structure!
+
+    Global Files
+        ** _reset
+        ** _variables
+        ** _reset_bootstraps // For Custom Classes
+
+
+    Project Files/ Page Layouts
+        ** Pages/ _Main
+
+        Project DOM
+            ** dom/_header.scss
+         
+            ** dom/_BottomNavBar.scss
+
+           Project (Card) Elements
+            Outer frame
+            ** /components/Cards/_Card_Frame.scss
+            Inner Frame
+            ** /components/Cards/_Card_Inner.scss
+
+                Inside Inner lies the card Elements
+                Card Type
+                ** /element/_Card_Typograhy.scss
+                Card Header
+                ** /element/_Card_Banner.scss
+                Card Content
+                ** /element/_Card_Content.scss
+                Card Bottom Bar
+                ** /element/_Card_BottomBar.scss
+
+                Side Specific
+                ** /_Card_Front.scss
+                ** /_Card_Back.scss
+
+
+            Flip Action
+            ** /components/Cards/_Card_Flip.scss
+            Bottom Bar
+            ** components/Cards/_Card_Bottom_Bar.scss
+            Media Components
+            ** /components/Cards/_Card_Media.scss
+
+ 
+    Global Elements
+        Buttons
+        ** components/Btns/_btns.scss
+
+-*/
+/*- Resets -*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul, li {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer; }
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: none; }
+
+/*- SCCS Properties -*/
+@font-face {
+  font-display: swap;
+  font-family: "GH Guardian Headline";
+  font-weight: bold;
+  src: url("https://gdn-cdn.s3.amazonaws.com/embed/2019/04/financial-future/fonts/GHGuardianHeadline-Bold.woff2") format("woff2"), url("https://gdn-cdn.s3.amazonaws.com/embed/2019/04/financial-future/fonts/GHGuardianHeadline-Bold.woff") format("woff"); }
+
+@font-face {
+  font-family: "Guardian Headline Regular";
+  src: url("https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Regular.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Regular.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Guardian Headline Bold";
+  src: url("https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Bold.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Bold.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-display: swap;
+  font-family: "TS3 Text Sans";
+  src: url("https://gdn-cdn.s3.amazonaws.com/embed/2019/04/financial-future/fonts/TS3TextSans.woff2") format("woff2"), url("https://gdn-cdn.s3.amazonaws.com/embed/2019/04/financial-future/fonts/TS3TextSans.woff") format("woff"); }
+
+@font-face {
+  font-display: swap;
+  font-family: "TS3 Text Sans";
+  font-weight: bold;
+  src: url("https://gdn-cdn.s3.amazonaws.com/embed/2019/04/financial-future/fonts/TS3TextSans-Bold.woff2") format("woff2"), url("https://gdn-cdn.s3.amazonaws.com/embed/2019/04/financial-future/fonts/TS3TextSans-Bold.woff") format("woff"); }
+
+/*- Typograpy  -*/
+html body {
+  font-family: "TS3 Text Sans";
+  background-color: #fff; }
+  html body .nopadding {
+    padding: 0; }
+  html body .nomargin {
+    margin: 0; }
+
+/*- Build up Dom Elements -*/
+#LoadingScreen {
+  height: 100vh;
+  width: 100vh;
+  background-color: #fff; }
+  #LoadingScreen .lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    width: 25%;
+    margin: 100px 50%; }
+  #LoadingScreen .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 6px;
+    width: 13px;
+    background: #69D1CA;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite; }
+  #LoadingScreen .lds-facebook div:nth-child(1) {
+    left: 6px;
+    animation-delay: -0.24s; }
+  #LoadingScreen .lds-facebook div:nth-child(2) {
+    left: 26px;
+    animation-delay: -0.12s; }
+  #LoadingScreen .lds-facebook div:nth-child(3) {
+    left: 45px;
+    animation-delay: 0; }
+
+@keyframes lds-facebook {
+  0% {
+    top: 6px;
+    height: 51px; }
+  50%, 100% {
+    top: 19px;
+    height: 26px; } }
+
+#Glabs {
+  background-color: #fff;
+  margin: 0%;
+  padding: 0%;
+  /* Smartphones (portrait and landscape) ----------- */
+  /* Large Phones ----------- */
+  /* Medium Phones ----------- */
+  /* Small Phones ----------- */
+  /* Smartphones (portrait) ----------- */
+  /* Smartphones (portrait and landscape) ----------- */
+  /* Large Phones ----------- */
+  /* Medium Phones ----------- */
+  /* Small Phones ----------- */
+  /* Smartphones (portrait) ----------- */
+  /* Smartphones (portrait and landscape) ----------- */
+  /* Large Phones ----------- */
+  /* Medium Phones ----------- */
+  /* Small Phones ----------- */
+  /* Smartphones (portrait) ----------- */
+  /*
+*       TABLET LARGE
+*
+*/
+  /* iPads Pro (landscape) ----------- */
+  /* iPads (portrait) ----------- */
+  /*
+*       TABLET NORMAL
+*
+*/
+  /* iPads (landscape) ----------- */
+  /* iPads (portrait) ----------- */
+  /*
+*       TABLET LARGE
+*
+*/
+  /* iPads Pro (landscape) ----------- */
+  /* iPads (portrait) ----------- */
+  /*
+*       TABLET NORMAL
+*
+*/
+  /* iPads (landscape) ----------- */
+  /* iPads (portrait) ----------- */
+  /*
+*       TABLET LARGE
+*
+*/
+  /* iPads Pro (landscape) ----------- */
+  /* iPads (portrait) ----------- */
+  /*
+*       TABLET NORMAL
+*
+*/
+  /* iPads (landscape) ----------- */
+  /* iPads (portrait) ----------- */
+  /* Desktops and laptops ----------- */
+  /* Large screens ----------- */
+  /* Large screens ----------- */
+  /* Large screens ----------- */
+  /************ 
+** Application Variables
+*************/ }
+  #Glabs h1, #Glabs h2, #Glabs h3 {
+    font-family: "TS3 Text Sans"; }
+  #Glabs p, #Glabs span, #Glabs a {
+    font-family: "TS3 Text Sans"; }
+  #Glabs #Header {
+    background-color: #fff;
+    margin: 0%;
+    padding: 0 0 10px 0px;
+    height: 80vh;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    align-items: start; }
+    #Glabs #Header .Title {
+      bottom: -8%;
+      left: 0;
+      width: auto;
+      padding: 1em;
+      margin: 0;
+      width: 100%;
+      position: absolute; }
+      #Glabs #Header .Title .Title-Fill-Color {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70%;
+        height: 100%;
+        background-color: #000;
+        z-index: 0; }
+      #Glabs #Header .Title .Title-Container {
+        z-index: 10;
+        position: relative;
+        padding: 0; }
+        #Glabs #Header .Title .Title-Container h1 {
+          font-size: 2.8em;
+          font-weight: 100;
+          line-height: 1em;
+          margin: 0 0 0px;
+          color: #fff;
+          padding: 3px 14px;
+          font-family: "TS3 Text Sans";
+          letter-spacing: 1px;
+          font-weight: bold; }
+        #Glabs #Header .Title .Title-Container h2 {
+          font-size: 1.3em;
+          font-weight: 100;
+          line-height: 1.1em;
+          margin: 0 0 10px;
+          color: #21333A; }
+        #Glabs #Header .Title .Title-Container p {
+          font-size: 1.15em;
+          font-weight: 100;
+          line-height: 1.5em;
+          margin: 0 20% 10px 0;
+          display: none; }
+    #Glabs #Header .DarkBar {
+      background-color: rgba(0, 0, 0, 0.8);
+      height: max-content; }
+    #Glabs #Header #Sponsor {
+      padding-bottom: 10px;
+      padding-top: 10px;
+      color: #fff; }
+      #Glabs #Header #Sponsor a {
+        color: #fff;
+        text-decoration: none;
+        line-height: 3.5em;
+        font-weight: 100; }
+      #Glabs #Header #Sponsor a:hover {
+        text-decoration: underline; }
+      #Glabs #Header #Sponsor span {
+        line-height: 3.5em;
+        float: right;
+        color: #fff; }
+      #Glabs #Header #Sponsor img {
+        width: 100px;
+        margin: 0 10px 0 10px;
+        float: right;
+        display: inline-block; }
+  #Glabs .BodyCopy {
+    color: #000;
+    background-color: transparent;
+    margin: 120px 0px 0px;
+    padding: 0 0 20px 0; }
+    #Glabs .BodyCopy h1 {
+      font-size: 2.8em;
+      font-weight: 100;
+      line-height: 1em;
+      margin: 0 0 10px; }
+    #Glabs .BodyCopy h2 {
+      font-size: 1.3em;
+      font-weight: 100;
+      line-height: 1.1em;
+      margin: 0 0 20px;
+      width: 66%; }
+    #Glabs .BodyCopy h3 {
+      font-size: 1.3em;
+      font-weight: 100;
+      line-height: 1.1em;
+      margin: 0 0 10px; }
+    #Glabs .BodyCopy p {
+      font-size: 1.15em;
+      font-weight: 100;
+      line-height: 1.5em;
+      margin: 0 0 20px;
+      width: 66%;
+      font-family: "TS3 Text Sans";
+      letter-spacing: 0px; }
+      #Glabs .BodyCopy p a {
+        color: #69D1CA;
+        font-family: "TS3 Text Sans"; }
+    #Glabs .BodyCopy p.bottom {
+      text-align: center;
+      border-top: 1px solid;
+      padding-top: 20px; }
+  #Glabs .BodyCopy.below {
+    border: unset; }
+    #Glabs .BodyCopy.below .container {
+      border-top: 1px solid #9B9B9B;
+      padding-top: 20px; }
+      #Glabs .BodyCopy.below .container p {
+        width: 100%; }
+  @media only screen and (max-width: 576px) {
+    #Glabs .BodyCopy {
+      margin: 80px 0px 0px; }
+      #Glabs .BodyCopy h2 {
+        font-size: 1.3em;
+        line-height: 1.3em;
+        margin: 0 0 10px; }
+      #Glabs .BodyCopy p {
+        font-size: 1.15em;
+        margin: 0 0 10px;
+        font-size: 1em; } }
+  @media only screen and (min-width: 480px) and (max-width: 576px) {
+    #Glabs .BodyCopy h2 {
+      width: 100%; }
+    #Glabs .BodyCopy p {
+      width: 100%;
+      padding: 7px 0px; } }
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    #Glabs .BodyCopy h2 {
+      width: 100%; }
+    #Glabs .BodyCopy p {
+      width: 100%;
+      padding: 7px 0px; } }
+  @media only screen and (max-width: 320px) {
+    #Glabs .BodyCopy h2 {
+      width: 100%; }
+    #Glabs .BodyCopy p {
+      width: 100%;
+      padding: 7px 0px; } }
+  #Glabs #ShareBar {
+    background-color: #69D1CA;
+    margin-top: 60px;
+    color: #21333A;
+    padding: .5em 2em; }
+    #Glabs #ShareBar h3 {
+      color: #21333A; }
+    #Glabs #ShareBar .ReadMore {
+      font-weight: 100;
+      transition: all .4s ease-in;
+      color: #21333A;
+      line-height: 1.3em;
+      display: inline-block;
+      margin: 8px 0; }
+      #Glabs #ShareBar .ReadMore strong {
+        font-weight: 800; }
+    #Glabs #ShareBar .ReadMore:hover {
+      text-decoration: none; }
+    #Glabs #ShareBar .chevron.right:before {
+      display: none;
+      left: 0;
+      transform: rotate(45deg); }
+    #Glabs #ShareBar .chevron.bottom:before {
+      top: 0;
+      transform: rotate(135deg); }
+    #Glabs #ShareBar .chevron.left:before {
+      left: 0.25em;
+      transform: rotate(-135deg); }
+    #Glabs #ShareBar .chevron::before {
+      border-style: solid;
+      border-width: 0.15em 0.15em 0 0;
+      content: '';
+      display: inline-block;
+      height: 0.45em;
+      left: 0.15em;
+      position: relative;
+      top: 1.1em;
+      transform: rotate(-45deg);
+      vertical-align: top;
+      width: 0.45em; }
+    #Glabs #ShareBar #ShareMe {
+      background-color: #69D1CA;
+      color: #21333A;
+      border-radius: 8px;
+      padding: 5px 10px;
+      border: 2px solid #21333A;
+      display: inline-block; }
+      #Glabs #ShareBar #ShareMe h3 {
+        font-size: 1em;
+        font-weight: 100;
+        display: inline-block;
+        line-height: 2em;
+        margin: 0 10px 0 0;
+        color: #21333A;
+        font-family: "TS3 Text Sans"; }
+      #Glabs #ShareBar #ShareMe ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        float: right; }
+        #Glabs #ShareBar #ShareMe ul li {
+          margin: 0 2px;
+          cursor: pointer; }
+          #Glabs #ShareBar #ShareMe ul li svg {
+            background-color: transparent !important; }
+            #Glabs #ShareBar #ShareMe ul li svg path {
+              fill: #21333A; }
+          #Glabs #ShareBar #ShareMe ul li circle, #Glabs #ShareBar #ShareMe ul li rect {
+            fill: #69D1CA; }
+  #Glabs #BottomBar {
+    display: none;
+    background-color: #69D1CA;
+    margin: 0%;
+    padding: 10px;
+    border-top: 3px solid #fff;
+    height: 70px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 99; }
+  @media only screen and (max-width: 992px) {
+    #Glabs #Header {
+      padding: 0; }
+      #Glabs #Header .Title .Title-Fill-Color {
+        width: 70%; }
+      #Glabs #Header .Title .Title-Container h1 {
+        font-size: 2em; } }
+  @media only screen and (min-width: 576px) and (max-width: 768px) {
+    #Glabs #Header {
+      padding: 0; }
+      #Glabs #Header .Title .Title-Fill-Color {
+        width: 95%; }
+      #Glabs #Header .Title .Title-Container h1 {
+        font-size: 2em; }
+      #Glabs #Header .DarkBar {
+        background: black;
+        background: linear-gradient(180deg, black 0%, rgba(0, 0, 0, 0.393995) 50%, rgba(255, 255, 255, 0) 100%); } }
+  @media only screen and (min-width: 480px) and (max-width: 576px) {
+    #Glabs #Header {
+      padding: 0; }
+      #Glabs #Header .Title .Title-Container h1 {
+        font-size: 1.9em; }
+      #Glabs #Header .Title .Title-Fill-Color {
+        width: 95%; }
+      #Glabs #Header .DarkBar {
+        background: black;
+        background: linear-gradient(180deg, black 0%, rgba(0, 0, 0, 0.393995) 50%, rgba(255, 255, 255, 0) 100%); }
+      #Glabs #Header #Sponsor {
+        margin-bottom: 0px;
+        padding: 0;
+        border-bottom: unset; }
+        #Glabs #Header #Sponsor a {
+          line-height: 2.5em; }
+        #Glabs #Header #Sponsor span {
+          float: left;
+          line-height: 3em; }
+        #Glabs #Header #Sponsor img {
+          float: unset; }
+        #Glabs #Header #Sponsor .text-left {
+          border-bottom: 2px solid #80D1D6;
+          padding: 0 25px; }
+        #Glabs #Header #Sponsor .text-right {
+          text-align: left !important;
+          padding: 12px 25px 0; }
+      #Glabs #Header .container h1 {
+        font-size: 1.8em; } }
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    #Glabs #Header {
+      padding: 0; }
+      #Glabs #Header .Title .Title-Container h1 {
+        font-size: 1.8em; }
+      #Glabs #Header .Title .Title-Fill-Color {
+        width: 95%; }
+      #Glabs #Header .DarkBar {
+        background: black;
+        background: linear-gradient(180deg, black 0%, rgba(0, 0, 0, 0.393995) 50%, rgba(255, 255, 255, 0) 100%); }
+      #Glabs #Header #Sponsor {
+        margin-bottom: 0px;
+        padding: 0;
+        border-bottom: unset; }
+        #Glabs #Header #Sponsor a {
+          line-height: 2.5em; }
+        #Glabs #Header #Sponsor span {
+          float: left;
+          line-height: 3em; }
+        #Glabs #Header #Sponsor img {
+          float: unset; }
+        #Glabs #Header #Sponsor .text-left {
+          border-bottom: 2px solid #80D1D6;
+          padding: 0 25px; }
+        #Glabs #Header #Sponsor .text-right {
+          text-align: left !important;
+          padding: 12px 25px 0; } }
+  @media only screen and (max-width: 320px) {
+    #Glabs #Header .DarkBar {
+      background: black;
+      background: linear-gradient(180deg, black 0%, rgba(0, 0, 0, 0.393995) 50%, rgba(255, 255, 255, 0) 100%); }
+    #Glabs #Header .Title .Title-Container h1 {
+      font-size: 1.3em; }
+    #Glabs #Header .Title .Title-Fill-Color {
+      width: 95%; }
+    #Glabs #Header #Sponsor {
+      margin-bottom: 0px;
+      padding: 0;
+      border-bottom: unset; }
+      #Glabs #Header #Sponsor a {
+        line-height: 2.5em; }
+      #Glabs #Header #Sponsor span {
+        float: left;
+        line-height: 3em; }
+      #Glabs #Header #Sponsor img {
+        float: unset; }
+      #Glabs #Header #Sponsor .text-left {
+        border-bottom: 2px solid #80D1D6;
+        padding: 0; }
+      #Glabs #Header #Sponsor .text-right {
+        text-align: left !important;
+        padding: 12px 0px 0; } }
+  @media only screen and (min-width: 576px) and (max-width: 768px) {
+    #Glabs #ShareBar {
+      margin-top: 30px; }
+      #Glabs #ShareBar .col-sm-12 {
+        text-align: center !important; }
+      #Glabs #ShareBar .ReadMore {
+        top: -15px;
+        position: relative; }
+      #Glabs #ShareBar #ShareMe {
+        position: relative;
+        top: -30px;
+        border: 1px solid #21333A; } }
+  @media only screen and (min-width: 480px) and (max-width: 576px) {
+    #Glabs #ShareBar {
+      margin-top: 30px; }
+      #Glabs #ShareBar .col-sm-12 {
+        text-align: center !important; }
+      #Glabs #ShareBar .ReadMore {
+        line-height: 1.4em;
+        top: -15px;
+        position: relative; }
+        #Glabs #ShareBar .ReadMore strong {
+          display: inline-block; }
+      #Glabs #ShareBar .chevron::before {
+        top: 0.55em; }
+      #Glabs #ShareBar #ShareMe {
+        position: relative;
+        top: -30px;
+        border: 1px solid #21333A; } }
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    #Glabs #ShareBar {
+      margin-top: 30px; }
+      #Glabs #ShareBar .col-sm-12 {
+        text-align: center !important; }
+      #Glabs #ShareBar .ReadMore {
+        line-height: 1.4em;
+        top: -15px;
+        position: relative; }
+        #Glabs #ShareBar .ReadMore strong {
+          display: inline-block; }
+      #Glabs #ShareBar .chevron {
+        display: none; }
+      #Glabs #ShareBar #ShareMe {
+        position: relative;
+        top: -30px;
+        border: 1px solid #21333A; } }
+  @media only screen and (max-width: 320px) {
+    #Glabs #ShareBar {
+      margin-top: 30px; }
+      #Glabs #ShareBar .col-sm-12 {
+        text-align: center !important;
+        padding: 0; }
+      #Glabs #ShareBar .ReadMore {
+        line-height: 1.4em;
+        top: -15px;
+        position: relative; }
+        #Glabs #ShareBar .ReadMore strong {
+          display: inline-block; }
+      #Glabs #ShareBar .chevron {
+        display: none; }
+      #Glabs #ShareBar #ShareMe {
+        position: relative;
+        top: -30px;
+        border: 1px solid #21333A; } }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    #Glabs #Header .Title {
+      bottom: -7%; } }
+  @media only screen and (min-width: 990px) and (max-width: 1024px) {
+    #Glabs {
+      /* Styles */ } }
+  #Glabs .btn_Answer {
+    position: relative;
+    background-color: #D8D8D8;
+    text-align: left; }
+    #Glabs .btn_Answer span {
+      text-align: left; }
+    #Glabs .btn_Answer .QuestionIcon {
+      position: absolute;
+      font-size: 1.5em;
+      right: 10px; }
+  #Glabs .btn_Answer:hover {
+    background-color: #9c9c9c;
+    color: white; }
+    #Glabs .btn_Answer:hover .QuestionIcon {
+      color: white; }
+  #Glabs .btn_Answer.Correct {
+    background-color: #3db540;
+    color: white; }
+    #Glabs .btn_Answer.Correct .QuestionIcon {
+      color: white; }
+  #Glabs .btn_Answer.InCorrect {
+    background-color: #D4FFE0;
+    color: white; }
+    #Glabs .btn_Answer.InCorrect .QuestionIcon {
+      color: white; }
+  #Glabs .ResetButton {
+    background-color: #69D1CA;
+    color: #fff; }
+  #Glabs #QuizWrapper {
+    background-color: transparent;
+    padding: 0px;
+    border-radius: 3px; }
+    #Glabs #QuizWrapper .QuizList {
+      padding: 0;
+      margin: 0 30% 0 0;
+      width: auto; }
+    #Glabs #QuizWrapper #LiveScore h2 {
+      font-size: 1.3em;
+      line-height: 1.1em; }
+    #Glabs #QuizWrapper #Scoreboard {
+      padding: 0px;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 52px;
+      z-index: 99; }
+      #Glabs #QuizWrapper #Scoreboard .TrackingDots {
+        display: none; }
+      #Glabs #QuizWrapper #Scoreboard ul {
+        width: 100%;
+        /* border: 1px solid; */
+        display: flex;
+        overflow: hidden;
+        white-space: nowrap; }
+        #Glabs #QuizWrapper #Scoreboard ul li {
+          float: left;
+          height: 5px;
+          text-align: center;
+          line-height: 10px;
+          white-space: nowrap;
+          transition: all 0.8s ease;
+          background-color: #D8D8D8;
+          color: #7adad4;
+          border-right: 1px inset transparent; }
+          #Glabs #QuizWrapper #Scoreboard ul li a {
+            color: white; }
+        #Glabs #QuizWrapper #Scoreboard ul li.correct {
+          background-color: #3db540;
+          color: white;
+          transition: all 0.8s ease; }
+        #Glabs #QuizWrapper #Scoreboard ul li.incorrect {
+          background-color: #D4FFE0;
+          color: white;
+          transition: all 0.8s ease; }
+        #Glabs #QuizWrapper #Scoreboard ul li.default {
+          background-color: transparent;
+          color: #7adad4;
+          transition: all 0.8s ease; }
+      #Glabs #QuizWrapper #Scoreboard .inner {
+        padding: 0px; }
+        #Glabs #QuizWrapper #Scoreboard .inner h2 {
+          font-size: 1.3em;
+          color: white;
+          line-height: 2em; }
+        #Glabs #QuizWrapper #Scoreboard .inner h1 {
+          display: none; }
+        #Glabs #QuizWrapper #Scoreboard .inner .DisplayGauge {
+          width: 100%;
+          margin: 0%; }
+          #Glabs #QuizWrapper #Scoreboard .inner .DisplayGauge li.perc_0 p {
+            opacity: 0;
+            transition: opacity .8s; }
+          #Glabs #QuizWrapper #Scoreboard .inner .DisplayGauge li {
+            padding: 15px 0;
+            height: auto;
+            border: none; }
+            #Glabs #QuizWrapper #Scoreboard .inner .DisplayGauge li p {
+              font-size: .9em;
+              line-height: 1em;
+              color: #333;
+              opacity: 1;
+              transition: opacity .8s;
+              white-space: nowrap; }
+          #Glabs #QuizWrapper #Scoreboard .inner .DisplayGauge li:nth-child(1) {
+            background-color: #1ba193; }
+          #Glabs #QuizWrapper #Scoreboard .inner .DisplayGauge li:nth-child(2) {
+            background-color: #bbcf08; }
+          #Glabs #QuizWrapper #Scoreboard .inner .DisplayGauge li:nth-child(3) {
+            background-color: #f8b010; }
+          #Glabs #QuizWrapper #Scoreboard .inner .DisplayGauge li:nth-child(4) {
+            background-color: #e95b0c; }
+      @media only screen and (min-width: 1200px) {
+        #Glabs #QuizWrapper #Scoreboard .tracking {
+          margin-left: calc(-100vw / 2 + 1140px / 2);
+          margin-right: calc(-100vw / 2 + 1140px / 2); } }
+      @media only screen and (min-width: 992px) and (max-width: 1200px) {
+        #Glabs #QuizWrapper #Scoreboard .tracking {
+          margin-left: calc(-100vw / 2 + 960px / 2);
+          margin-right: calc(-100vw / 2 + 960px / 2); } }
+      @media only screen and (min-width: 768px) and (max-width: 992px) {
+        #Glabs #QuizWrapper #Scoreboard .tracking {
+          margin-left: calc(-100vw / 2 + 720px / 2);
+          margin-right: calc(-100vw / 2 + 720px / 2); } }
+      @media only screen and (min-width: 576px) and (max-width: 768px) {
+        #Glabs #QuizWrapper #Scoreboard .tracking {
+          margin-left: calc(-100vw / 2 + 540px / 2);
+          margin-right: calc(-100vw / 2 + 540px / 2); } }
+      @media only screen and (max-width: 576px) {
+        #Glabs #QuizWrapper #Scoreboard {
+          display: none; } }
+      @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        #Glabs #QuizWrapper #Scoreboard {
+          background-color: red; }
+          #Glabs #QuizWrapper #Scoreboard .tracking {
+            margin-left: calc(-100vw / 2 + 720px / 2);
+            margin-right: calc(-100vw / 2 + 720px / 2); } }
+      @media (min-width: 1024px) and (max-width: 12000px) and (orientation: portrait) {
+        #Glabs #QuizWrapper #Scoreboard {
+          background-color: red; }
+          #Glabs #QuizWrapper #Scoreboard .tracking {
+            margin-left: calc(-100vw / 2 + 960px / 2);
+            margin-right: calc(-100vw / 2 + 960px / 2); } }
+    #Glabs #QuizWrapper #Question {
+      margin: 10px 0 50px;
+      background-size: cover;
+      background-position: center center; }
+      #Glabs #QuizWrapper #Question .Label {
+        margin: 0px 0;
+        padding: 0;
+        display: grid;
+        background-color: black;
+        background-position: center;
+        background-size: cover; }
+        #Glabs #QuizWrapper #Question .Label img {
+          width: 100%; }
+      #Glabs #QuizWrapper #Question .Answers {
+        padding: 0px 0px;
+        position: relative; }
+        #Glabs #QuizWrapper #Question .Answers h1 {
+          text-align: left;
+          font-size: 1.5em;
+          line-height: 1.3em;
+          color: #000;
+          padding: 2% 10px;
+          font-family: "Guardian Headline Bold";
+          letter-spacing: 1px;
+          margin-bottom: 0px;
+          font-weight: bold; }
+        #Glabs #QuizWrapper #Question .Answers button.Correct {
+          color: #000;
+          text-align: left; }
+          #Glabs #QuizWrapper #Question .Answers button.Correct span {
+            text-align: left; }
+        #Glabs #QuizWrapper #Question .Answers button.InCorrect {
+          color: #333; }
+          #Glabs #QuizWrapper #Question .Answers button.InCorrect span {
+            text-align: left; }
+        #Glabs #QuizWrapper #Question .Answers button {
+          width: 100%;
+          margin: 2px 0%;
+          padding: 20px 10px;
+          font-size: .95em;
+          border-radius: 0;
+          border: none; }
+          #Glabs #QuizWrapper #Question .Answers button span {
+            text-align: left;
+            margin: 0 10% 0 10px;
+            text-transform: initial;
+            display: inline-block; }
+      @media only screen and (max-width: 576px) {
+        #Glabs #QuizWrapper #Question .Answers h1 {
+          font-size: 1.3em; } }
+    #Glabs #QuizWrapper #CountDownTimer {
+      text-align: right;
+      position: absolute;
+      bottom: 5px;
+      right: 5px; }
+      #Glabs #QuizWrapper #CountDownTimer h2 {
+        font-size: 1.15em; }
+        #Glabs #QuizWrapper #CountDownTimer h2 span {
+          color: #21333A;
+          font-size: 1.3em; }
+    #Glabs #QuizWrapper #Answer .AnimateInThis {
+      overflow: hidden; }
+      #Glabs #QuizWrapper #Answer .AnimateInThis #icon {
+        text-align: center; }
+        #Glabs #QuizWrapper #Answer .AnimateInThis #icon img {
+          height: 250px; }
+      #Glabs #QuizWrapper #Answer .AnimateInThis .speechbubble {
+        position: relative;
+        border-radius: .4em;
+        width: 90%;
+        padding: 4%;
+        margin: 0px 5% 20px;
+        font-size: .9em;
+        line-height: 1.2em; }
+        #Glabs #QuizWrapper #Answer .AnimateInThis .speechbubble h2 {
+          font-size: 1.3em;
+          margin-bottom: 20px; }
+      #Glabs #QuizWrapper #Answer .AnimateInThis .speechbubble:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border: 21px solid transparent;
+        border-bottom: 0;
+        margin-left: -21px;
+        margin-bottom: -21px; }
+    #Glabs #QuizWrapper #Answer.correct .speechbubble {
+      background: #3db540;
+      color: #21333A; }
+    #Glabs #QuizWrapper #Answer.correct .speechbubble:after {
+      border-top-color: #3db540; }
+    #Glabs #QuizWrapper #Answer.incorrect .speechbubble {
+      background: #D4FFE0;
+      color: #fff; }
+    #Glabs #QuizWrapper #Answer.incorrect .speechbubble:after {
+      border-top-color: #D4FFE0; }
+    @media only screen and (max-width: 576px) {
+      #Glabs #QuizWrapper .QuizList {
+        margin: 0%; }
+      #Glabs #QuizWrapper > .row {
+        margin: 0; } }
+  #Glabs #ResultPage {
+    background-color: #fff;
+    padding: 0; }
+    #Glabs #ResultPage #ShareMe {
+      padding: 10px 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      align-content: flex-start; }
+      #Glabs #ResultPage #ShareMe h3 {
+        margin: 0 10px; }
+      #Glabs #ResultPage #ShareMe ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: flex-start; }
+        #Glabs #ResultPage #ShareMe ul li {
+          margin: 0 2px;
+          cursor: pointer; }
+          #Glabs #ResultPage #ShareMe ul li svg {
+            background-color: transparent !important;
+            border: 1px solid;
+            border-radius: 100px; }
+            #Glabs #ResultPage #ShareMe ul li svg path {
+              fill: #21333A; }
+          #Glabs #ResultPage #ShareMe ul li circle, #Glabs #ResultPage #ShareMe ul li rect {
+            fill: transparent; }
+    #Glabs #ResultPage .ResetQuiz {
+      padding: 20px 0;
+      background-color: #fff;
+      border-bottom: 1px solid white;
+      margin: 0px; }
+      #Glabs #ResultPage .ResetQuiz button {
+        float: right;
+        box-shadow: none;
+        text-transform: unset; }
+    #Glabs #ResultPage .Result_Ints {
+      margin: 0;
+      padding: 20px 5%;
+      border-top: 1px solid #979797;
+      border-bottom: 1px solid #979797; }
+      #Glabs #ResultPage .Result_Ints h1 {
+        text-align: center;
+        font-size: 2.2em;
+        width: 60%;
+        margin-bottom: 10px;
+        padding: 0 0 10px 10px;
+        margin: 0 20% 20px;
+        color: #21333A; }
+      #Glabs #ResultPage .Result_Ints .YourScore {
+        text-align: center; }
+        #Glabs #ResultPage .Result_Ints .YourScore h2 {
+          font-size: 2em;
+          text-transform: uppercase; }
+        #Glabs #ResultPage .Result_Ints .YourScore h3 {
+          font-size: 3em;
+          line-height: 1.5em; }
+      #Glabs #ResultPage .Result_Ints .ScoreCard h2 {
+        display: none; }
+      #Glabs #ResultPage .Result_Ints .ScoreCard ul li {
+        float: left;
+        width: 30px;
+        height: 30px;
+        border-radius: 100px;
+        text-align: center;
+        line-height: 30px;
+        margin: 0 5px 0 0;
+        transition: all 0.8s ease;
+        background-color: #D8D8D8;
+        color: #7adad4; }
+      #Glabs #ResultPage .Result_Ints .ScoreCard ul li.correct {
+        background-color: #3db540;
+        color: white;
+        transition: all 0.8s ease; }
+      #Glabs #ResultPage .Result_Ints .ScoreCard ul li.incorrect {
+        background-color: #D4FFE0;
+        color: white;
+        transition: all 0.8s ease; }
+      #Glabs #ResultPage .Result_Ints .ScoreCard ul li.default {
+        background-color: #D8D8D8;
+        color: #7adad4;
+        transition: all 0.8s ease; }
+      #Glabs #ResultPage .Result_Ints .PercentageCircleContainer {
+        padding: 30px 0;
+        text-align: center; }
+        #Glabs #ResultPage .Result_Ints .PercentageCircleContainer .PercentageCircle {
+          color: white; }
+        #Glabs #ResultPage .Result_Ints .PercentageCircleContainer h1 {
+          color: #000;
+          text-align: left;
+          margin: 0 0 30px 0px;
+          padding: 0;
+          font-family: 'Guardian Headline Bold';
+          font-size: 2.6em; }
+        #Glabs #ResultPage .Result_Ints .PercentageCircleContainer h2 {
+          text-align: left;
+          font-size: 2em;
+          margin: 10px 0 15px;
+          color: #000; }
+        #Glabs #ResultPage .Result_Ints .PercentageCircleContainer p {
+          text-align: left;
+          font-size: 1.2em;
+          margin: 0;
+          color: #000; }
+        #Glabs #ResultPage .Result_Ints .PercentageCircleContainer .MeterImage {
+          text-align: right; }
+          #Glabs #ResultPage .Result_Ints .PercentageCircleContainer .MeterImage img {
+            width: 90%; }
+      #Glabs #ResultPage .Result_Ints .Me {
+        background-color: #fff; }
+      #Glabs #ResultPage .Result_Ints .NotMe {
+        display: none; }
+      @media only screen and (max-width: 992px) and (min-width: 768px) {
+        #Glabs #ResultPage .Result_Ints .PercentageCircleContainer h1 {
+          font-size: 2em; }
+        #Glabs #ResultPage .Result_Ints .PercentageCircleContainer h2 {
+          font-size: 1.6em; }
+        #Glabs #ResultPage .Result_Ints .PercentageCircleContainer p {
+          font-size: 1.2em; }
+        #Glabs #ResultPage .Result_Ints .PercentageCircleContainer .MeterImage {
+          text-align: center; }
+          #Glabs #ResultPage .Result_Ints .PercentageCircleContainer .MeterImage img {
+            width: 100%; } }
+      @media only screen and (max-width: 768px) and (min-width: 576px) and (orientation: portrait) {
+        #Glabs #ResultPage .Result_Ints {
+          padding: 0px 5%; }
+          #Glabs #ResultPage .Result_Ints .PercentageCircleContainer h2 {
+            font-size: 1.4em; }
+          #Glabs #ResultPage .Result_Ints .PercentageCircleContainer p {
+            font-size: 1.2em; }
+          #Glabs #ResultPage .Result_Ints .PercentageCircleContainer .MeterImage {
+            padding: 0% 0; }
+            #Glabs #ResultPage .Result_Ints .PercentageCircleContainer .MeterImage img {
+              width: 90%; } }
+      @media only screen and (max-width: 767px) and (min-width: 576px) {
+        #Glabs #ResultPage .Result_Ints {
+          padding: 0px 5%; }
+          #Glabs #ResultPage .Result_Ints .PercentageCircleContainer {
+            padding: 20px 0; }
+            #Glabs #ResultPage .Result_Ints .PercentageCircleContainer h1 {
+              margin: 0 0 20px 0px; }
+            #Glabs #ResultPage .Result_Ints .PercentageCircleContainer h2 {
+              font-size: 1.4em; }
+            #Glabs #ResultPage .Result_Ints .PercentageCircleContainer p {
+              font-size: 1.2em; }
+            #Glabs #ResultPage .Result_Ints .PercentageCircleContainer .MeterImage {
+              text-align: center;
+              padding: 10% 0; }
+              #Glabs #ResultPage .Result_Ints .PercentageCircleContainer .MeterImage img {
+                width: 70%; } }
+      @media only screen and (max-width: 576px) {
+        #Glabs #ResultPage .Result_Ints {
+          padding: 0px 5%; }
+          #Glabs #ResultPage .Result_Ints .PercentageCircleContainer h1 {
+            font-size: 2.5em; }
+          #Glabs #ResultPage .Result_Ints .PercentageCircleContainer h2 {
+            font-size: 1.6em; }
+          #Glabs #ResultPage .Result_Ints .PercentageCircleContainer p {
+            font-size: 1.2em; }
+          #Glabs #ResultPage .Result_Ints .PercentageCircleContainer .MeterImage {
+            text-align: center;
+            padding: 10% 0; }
+            #Glabs #ResultPage .Result_Ints .PercentageCircleContainer .MeterImage img {
+              width: 90%; } }
+    #Glabs #ResultPage .Quiz_Summary {
+      display: none;
+      background-color: #42bfb7;
+      border-top: 1px solid white;
+      padding: 20px 0;
+      margin: 50px 0 0px; }
+      #Glabs #ResultPage .Quiz_Summary p {
+        text-align: center;
+        display: inline-block;
+        width: 100%; }
+    #Glabs #ResultPage .ReviewSection {
+      padding: 50px 15%;
+      display: inline-block; }
+      #Glabs #ResultPage .ReviewSection h1 {
+        font-size: 2em;
+        text-align: center;
+        border-bottom: 1px solid;
+        margin-bottom: 50px;
+        padding-bottom: 10px;
+        width: 90%;
+        margin: 0 5% 50px; }
+        #Glabs #ResultPage .ReviewSection h1 .ReviewIcon {
+          float: right; }
+      #Glabs #ResultPage .ReviewSection p {
+        float: right;
+        width: 48%;
+        margin: 0 5% 0 0;
+        line-height: 1.3em; }
+      #Glabs #ResultPage .ReviewSection img {
+        width: 40%;
+        float: left;
+        margin: 0 1% 0 5%; }
+      #Glabs #ResultPage .ReviewSection a {
+        float: right;
+        margin: 30px 5% 0 0; }
+    #Glabs #ResultPage .ReviewSection:nth-child(even) {
+      background: #FFCFAB;
+      background-image: URL("/assets/images/asfalt-dark.png"); }
+    #Glabs #ResultPage .ReviewSection:nth-child(odd) {
+      background: #9DEAE4;
+      background-image: URL("/assets/images/asfalt-dark.png"); }
+    #Glabs #ResultPage .ReviewSection.Correct h1 .ReviewIcon {
+      color: #3db540; }
+    #Glabs #ResultPage .ReviewSection.InCorrect h1 .ReviewIcon {
+      color: #D4FFE0; }
+    #Glabs #ResultPage .crunchingtheNumbers {
+      text-align: center;
+      padding: 50px;
+      color: #21333A; }
+      #Glabs #ResultPage .crunchingtheNumbers h1 {
+        color: #21333A;
+        font-size: 2em;
+        margin: 30px 0; }

@@ -1,0 +1,36 @@
+#QuizWrapper{
+
+    background-color:transparent;
+    padding: 0px;
+    border-radius: 3px;
+   
+    .QuizList{
+        padding: 0;
+        margin: 0 30% 0 0;
+        width: auto;
+    }
+        @import "./_LiveScore";
+        @import "./_Scoreboard";
+        @import "./_Progress.scss";
+
+        @import "./Question.scss";
+        @import "./CountDownTimer";
+        @import "./Answer";
+
+   
+@media only screen and (min-width : 1024px) and (max-width : 1366x) and (orientation : landscape) {
+   
+}
+    
+
+@media only screen and (max-width : 576px)  {
+    .QuizList{ margin: 0% ; }
+    >.row{ margin: 0; }
+}
+
+
+
+        
+}
+
+

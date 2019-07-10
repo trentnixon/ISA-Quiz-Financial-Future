@@ -1,0 +1,37 @@
+
+.btn_Answer{
+    position: relative;
+    background-color: $Color_Default;
+    text-align: left;
+    span{
+        text-align: left;
+    }
+    .QuestionIcon{
+        position: absolute; 
+        font-size: 1.5em;
+        right: 10px;
+
+    }
+    
+}
+
+.btn_Answer:hover{
+    background-color: $Color_Hover;
+    color: white;
+    .QuestionIcon{ color: white; }
+}
+.btn_Answer.Correct{
+    background-color:  $Color_Corrent;
+    color: white;
+    .QuestionIcon{ color: white; }
+}
+.btn_Answer.InCorrect{
+    background-color:  $Color_Incorrect;
+    color: white;
+    .QuestionIcon{ color: white; }
+}
+
+.ResetButton{
+    background-color: $TertiaryColor;
+    color: $PrimaryColor;
+}
