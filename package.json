@@ -9,7 +9,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.2",
     "@fortawesome/free-solid-svg-icons": "^5.2.0",
     "@fortawesome/react-fontawesome": "^0.1.2",
-    "ajv": "^6.5.0",
+    "ajv": "^6.12.3",
     "axios": "^0.18.0",
     "i": "^0.3.6",
     "babel-plugin-react-html-attrs": "^2.0.0",
